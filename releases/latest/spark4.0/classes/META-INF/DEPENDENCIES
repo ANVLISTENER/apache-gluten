@@ -1,0 +1,104 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+Gluten Package
+
+
+From: 'an unknown organization'
+
+  - FindBugs-jsr305 (http://findbugs.sourceforge.net/) com.google.code.findbugs:jsr305:jar:3.0.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Gson (https://github.com/google/gson) com.google.code.gson:gson:jar:2.11.0
+    License: Apache-2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - FlatBuffers Java API (https://github.com/google/flatbuffers) com.google.flatbuffers:flatbuffers-java:bundle:24.3.25
+    License: Apache License V2.0  (https://raw.githubusercontent.com/google/flatbuffers/master/LICENSE)
+
+  - Guava InternalFutureFailureAccess and InternalFutures (https://github.com/google/guava/failureaccess) com.google.guava:failureaccess:bundle:1.0.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Guava: Google Core Libraries for Java (https://github.com/google/guava) com.google.guava:guava:bundle:32.0.0-jre
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Guava ListenableFuture only (https://github.com/google/guava/listenablefuture) com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - J2ObjC Annotations (https://github.com/google/j2objc/) com.google.j2objc:j2objc-annotations:jar:2.8
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Protocol Buffers [Core] (https://developers.google.com/protocol-buffers/protobuf-java/) com.google.protobuf:protobuf-java:jar:3.23.4
+    License: BSD-3-Clause  (https://opensource.org/licenses/BSD-3-Clause)
+
+  - Protocol Buffers [Util] (https://developers.google.com/protocol-buffers/protobuf-java-util/) com.google.protobuf:protobuf-java-util:jar:3.23.4
+    License: BSD-3-Clause  (https://opensource.org/licenses/BSD-3-Clause)
+
+  - Checker Qual (https://checkerframework.org/) org.checkerframework:checker-qual:jar:3.33.0
+    License: The MIT License  (http://opensource.org/licenses/MIT)
+
+
+From: 'Apache Software Foundation' (https://www.apache.org)
+
+  - Gluten Backends Velox (https://github.com/apache/incubator-gluten.git/backends-velox) org.apache.gluten:backends-velox:jar:1.6.0
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Gluten Arrow (https://github.com/apache/incubator-gluten.git/gluten-arrow) org.apache.gluten:gluten-arrow:jar:1.6.0
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Gluten Core (https://github.com/apache/incubator-gluten.git/gluten-core) org.apache.gluten:gluten-core:jar:1.6.0
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Gluten Ras Common (https://github.com/apache/incubator-gluten.git/gluten-ras/gluten-ras-common) org.apache.gluten:gluten-ras-common:jar:1.6.0
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Gluten Substrait (https://github.com/apache/incubator-gluten.git/gluten-substrait) org.apache.gluten:gluten-substrait:jar:1.6.0
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Gluten UI (https://github.com/apache/incubator-gluten.git/gluten-ui) org.apache.gluten:gluten-ui:jar:1.6.0
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Gluten Shims Common (https://github.com/apache/incubator-gluten.git/spark-sql-columnar-shims/spark-sql-columnar-shims-common) org.apache.gluten:spark-sql-columnar-shims-common:jar:1.6.0
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Gluten Shims for Spark 4.0 (https://github.com/apache/incubator-gluten.git/spark-sql-columnar-shims/spark-sql-columnar-shims-spark40) org.apache.gluten:spark-sql-columnar-shims-spark40:jar:1.6.0
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+From: 'Google Inc.' (http://www.google.com/)
+
+  - Jimfs (https://github.com/google/jimfs/jimfs) com.google.jimfs:jimfs:bundle:1.3.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+From: 'Google LLC' (http://www.google.com)
+
+  - error-prone annotations (https://errorprone.info/error_prone_annotations) com.google.errorprone:error_prone_annotations:jar:2.18.0
+    License: Apache 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+From: 'The Apache Software Foundation' (https://www.apache.org/)
+
+  - Arrow Java C Data Interface (https://arrow.apache.org/) org.apache.arrow:arrow-c-data:jar:18.1.0
+    License: Apache-2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Arrow Java Dataset (https://arrow.apache.org/) org.apache.arrow:arrow-dataset:jar:18.1.0
+    License: Apache-2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Arrow Format (https://arrow.apache.org/) org.apache.arrow:arrow-format:jar:18.1.0
+    License: Apache-2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Arrow Memory - Core (https://arrow.apache.org/) org.apache.arrow:arrow-memory-core:jar:18.1.0
+    License: Apache-2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Arrow Memory - Unsafe (https://arrow.apache.org/) org.apache.arrow:arrow-memory-unsafe:jar:18.1.0
+    License: Apache-2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Arrow Vectors (https://arrow.apache.org/) org.apache.arrow:arrow-vector:jar:18.1.0
+    License: Apache-2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+
+
