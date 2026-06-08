@@ -60,7 +60,29 @@ allowing support for additional backends in the future.
 
 **Disclaimer: This is not for commercial purpose but to learn building ftom source.** 
 
+### 2.b What's new
 
+1. Shift to Scala 2.13 and New Java ArchitecturesSpark
+
+* Spark 3.5: Compiled with Scala 2.12 and optimized for older Java 8/11 bytecodes.
+* Spark 4.0: Completely drops Scala 2.12 and compiles using Scala 2.13. It targets Java 17/21 bytecode features. 
+
+The updated cross-compiled bindings, expanded JNI (Java Native Interface) bridge logic, and heavy Scala 2.13 standard libraries significantly increase the size of the Java/Scala portion of the bundle.
+
+4. Upgraded Arrow and Substrait Serialization
+
+Gluten relies on Apache Arrow (for in-memory columnar data formatting) and Substrait (for translating Spark plans to C++ executable plans).
+
+For the Spark 4.0 integration, Gluten had to adapt to Spark's native changes by incorporating newer, more feature-rich versions of the Substrait Protobuf structures.The generated native code required to deserialize and optimize these newer, complex Spark 4.0 execution trees adds substantial weight to the binary.
+
+3. More Vectorized C++ FunctionsAs Gluten matures, it natively implements more of Spark’s internal expressions.
+
+In the Spark 4.0 compatible bundles (Gluten 1.3+), Meta’s Velox backend includes pre-compiled C++ vector math for many more complex string handling, datetime, and nested JSON features (VARIANT types) that Spark 4.0 natively introduces. More native functions directly equal a larger embedded .so binary.
+
+4. Advanced Shim LayersGluten handles different versions of Spark via a Shim Layer.
+
+To guarantee seamless compatibility with Spark 4.0's heavily rewritten Catalyst Optimizer, the Gluten team had to write much larger Java/Scala shim interfaces to prevent data type mismatches.Essentially, you are paying a 57 MB file size premium for significantly broader native function coverage, a modern language runtime, and structural stability on Spark 4.0 clusters.
+   
 Gluten's key components:
 * **Query Plan Conversion**: Converts Spark's physical plan to Substrait plan.
 * **Unified Memory Management**: Manages native memory allocation.
