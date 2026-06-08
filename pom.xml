@@ -14,6 +14,14 @@
   ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
+  
+  ====================* BUILD ARCHITECTURE CONFIGURATION *=============== 
+       * Target Runtime: Java 21 (OpenJDK 21.0.11)                         
+       * Target Language: Scala 2.13.13 (with isolated Zinc classloader fix)
+       * Build: Stable (Production)                                        
+       * Engine Profile: Backends-Velox (Vectorized Execution)             
+  =======================================================================
+
   -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -57,9 +65,8 @@
     <developerConnection>scm:git:ssh://github.com:apache/incubator-gluten.git</developerConnection>
     <url>https://github.com/apache/incubator-gluten/tree/main</url>
   </scm>
-
   <properties>
-    <java.version>1.8</java.version>
+    <java.version>21</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <caffeine.version>2.9.3</caffeine.version>
@@ -1094,7 +1101,7 @@
         <jdk>1.8</jdk>
       </activation>
       <properties>
-        <java.version>1.8</java.version>
+        <java.version>21</java.version>
       </properties>
     </profile>
     <profile>
