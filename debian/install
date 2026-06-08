@@ -1,0 +1,2 @@
+# This copies your shaded JAR into the system-wide Java library directory
+package/target/gluten-velox-bundle-*.jar usr/share/java/

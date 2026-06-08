@@ -1,0 +1,15 @@
+Source: apache-gluten-velox
+Section: java
+Priority: optional
+Maintainer: Kooriyattuthobiyil Raveendran Libin <lathalibin@gmail.com>
+Build-Depends: debhelper (>= 13), openjdk-21-jdk
+Standards-Version: 4.6.2
+
+Package: apache-gluten-velox
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}, openjdk-21-jre-headless
+Description: Vectorized engine for Apache Spark (Velox Backend)
+ Apache Gluten is an execution engine that offloads Spark JVM 
+ processing to a native vectorized layer using Velox.
+ .
+ Built for Java 21 and Scala 2.13.13.

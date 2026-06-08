@@ -1,0 +1,34 @@
+#!/usr/bin/make -f
+
+# Staging path inside the package construction root
+DEB_DESTDIR = $(CURDIR)/debian/gluten-velox-spark/usr/share/gluten
+
+%:
+	dh $@
+
+override_dh_auto_clean:
+	[ ! -d build ] || ./build/mvn clean || true
+
+override_dh_auto_configure:
+	# No separate configuration phase required for Maven layouts
+
+override_dh_auto_build:
+	# The exact combination that yielded the 140MB artifact
+	./build/mvn clean install \
+		-DskipTests \
+		-Pscala-2.13 \
+		-Pbackends-velox \
+		-Pspark-4.0 \
+		-Dspark.bundle.version=4.x \
+		-Dscalastyle.skip=true \
+		-Dspotless.check.skip=true
+
+override_dh_auto_install:
+	mkdir -p $(DEB_DESTDIR)
+	
+	# Reference the precise 140MB Spark 4.0 cross-compatible file name
+	cp package/target/gluten-velox-bundle-spark4.0_2.13-linux_amd64-1.6.0.jar $(DEB_DESTDIR)/
+
+override_dh_shlibdeps:
+	dh_shlibdeps --dpkg-shlibdeps-params=--ignore-missing-info || true
+

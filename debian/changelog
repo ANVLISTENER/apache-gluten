@@ -1,0 +1,7 @@
+apache-gluten-velox (1.6.0-1~ubuntu24.04) noble; urgency=medium
+
+  * Official production release optimizing for Java 21 and Scala 2.13.13.
+  * Native Velox backends locked against Ubuntu 24.04 LTS (Noble Numbat) systems.
+  * Strict strong encapsulation overrides via system environment defaults.
+
+ -- libin0 <lathalibin@gmail.com>  Mon, 08 Jun 2026 21:00:00 +0530
