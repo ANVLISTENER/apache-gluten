@@ -1,6 +1,6 @@
 <img src="docs/image/gluten-logo.svg" alt="Gluten" width="200">
 
-# Apache Gluten
+# Apache Gluten ( Fork of Official Apache Gluten)
 
 **A Middle Layer for Offloading JVM-based SQL Engines' Execution to Native Engines**
 
@@ -13,6 +13,8 @@
 Apache Spark is a mature and stable project that has been under continuous development for many years. It is one of the most widely used frameworks for scaling out the processing of petabyte-scale datasets.
 Over time, the Spark community has had to address significant performance challenges, which required a variety of optimizations. A major milestone came with Spark 2.0, where Whole-Stage Code Generation
 replaced the Volcano Model, delivering up to a 2× speedup. Since then, most subsequent improvements have focused on the query plan level, while the performance of individual operators has almost stopped improving.
+
+Note: This repo attempts push to Ubuntu 24.04 to latest tech.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/47296334/199853029-b6d0ea19-f8e4-4f62-9562-2838f7f159a7.png" width="700">
@@ -49,6 +51,15 @@ and Spark’s Columnar API (introduced in Spark 3.0) is used during execution. G
 </p>
 Currently, Gluten supports only ClickHouse and Velox backends. Velox is a C++ database acceleration library which provides reusable, extensible and high-performance data processing components. In addition, Gluten is designed to be extensible,
 allowing support for additional backends in the future.
+
+### 2.a Build Requeirements
+
+**OS**: Ubuntu 24.04 LTS
+**Spark**: 3.5/4.0
+**Tools**: gcc-14, g++-14, Java-21, Scala 2.13.13.
+
+**Disclaimer: This is not for commercial purpose but to learn building ftom source.** 
+
 
 Gluten's key components:
 * **Query Plan Conversion**: Converts Spark's physical plan to Substrait plan.
